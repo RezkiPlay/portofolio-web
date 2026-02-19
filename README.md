@@ -12,7 +12,7 @@
 
 ## 🌐 Live Preview
 
-🔗 [rezkiplay.github.io](https://rezkiplay.my.id) 
+🔗 [rezkiplay.my.id](https://rezkiplay.my.id) 
 
 ---
 
