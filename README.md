@@ -12,7 +12,7 @@
 
 ## 🌐 Live Preview
 
-🔗 [rezkiplay.github.io](https://rezkiplay.github.io) *(update sesuai URL deploy kamu)*
+🔗 [rezkiplay.github.io](https://rezkiplay.my.id) 
 
 ---
 
