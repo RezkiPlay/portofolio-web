@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RezkiPlay — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Constellation Canvas -->
+<canvas id="constellation"></canvas>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <img class="pfp" src="assets/pfp1.jpeg" alt="RezkiPlay">
+    RezkiPlay 
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about" data-num="01">About</a></li>
+    <li><a href="#specialisms" data-num="02">Specialisms</a></li>
+    <li><a href="#projects" data-num="03">Projects</a></li>
+    <li><a href="#contact" data-num="04">Contact</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mob-overlay" id="overlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mob-link">01. About</a>
+  <a href="#specialisms" class="mob-link">02. Specialisms</a>
+  <a href="#projects" class="mob-link">03. Projects</a>
+  <a href="#contact" class="mob-link">04. Contact</a>
+</div>
+
+<!-- ─── Hero ─── -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-pre">Portfolio</p>
+        <h1 class="hero-name">Hi, I'm<br><span>Rezkiplay</span></h1>
+        <div class="hero-roles">
+          <span class="role-text" id="roleText"></span><span class="cursor-blink"></span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
+          <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <div class="avatar-frame">
+          <img src="assets/pfp1.jpeg" alt="RezkiPlay">
+        </div>
+        <div class="avatar-deco"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ─── About ─── -->
+<section id="about">
+  <div class="wrap">
+    <div class="s-header reveal">
+      <p class="s-pre">Who I Am</p>
+      <h2 class="s-title">About <em>Me</em></h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-img-wrap reveal reveal-delay-1">
+        <img src="assets/pfp3.jpeg" alt="RezkiPlay">
+      </div>
+      <div class="about-bio reveal reveal-delay-2">
+        <p>大家好! Seorang GenZ yang sedang berpetualang. Saya sangat suka bermain game dan membuat konten yang menarik. Di sisi lain saya juga suka mempelajari hal-hal baru — seperti <em>code</em>, desain, bahasa asing, dan kecerdasan buatan.</p>
+        <p>Pendekatan saya selalu berfokus pada keseimbangan antara fungsi yang powerful dengan desain yang intuitif. Saya percaya bahwa teknologi terbaik adalah yang terasa seperti sihir bagi penggunanya.</p>
+
+        <div class="roles-row">
+          <span class="role-badge">Livestreamer</span>
+          <span class="role-badge">Content Creator</span>
+          <span class="role-badge">Web Developer</span>
+          <span class="role-badge">Data Scientist</span>
+          <span class="role-badge">ML Enthusiast</span>
+          <span class="role-badge">AI Engineer Learner</span>
+        </div>
+
+        <p class="skills-title">Tech & Skills</p>
+        <div class="skill-chips">
+          <span class="chip">Web Development</span>
+          <span class="chip">UI/UX Design</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Python</span>
+          <span class="chip">C#</span>
+          <span class="chip">PHP</span>
+          <span class="chip">Game Development</span>
+          <span class="chip">Animation 2D/3D</span>
+          <span class="chip">Content Creation</span>
+          <span class="chip">Video Editing</span>
+          <span class="chip">Machine Learning</span>
+          <span class="chip">Data Analysis</span>
+          <span class="chip">English</span>
+          <span class="chip">中文</span>
+          <span class="chip">basic 日本語</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Specialisms ─── -->
+<section id="specialisms">
+  <div class="wrap">
+    <div class="s-header reveal">
+      <p class="s-pre">What I Do</p>
+      <h2 class="s-title">My <em>Specialisms</em></h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="spec-grid">
+      <div class="spec-card reveal reveal-delay-1">
+        <div class="spec-icon"><i class="fas fa-robot"></i></div>
+        <h3>AI / Machine Learning</h3>
+        <p>Belajar dan mengeksplorasi dunia kecerdasan buatan — dari supervised learning hingga neural networks. Antusias membangun model yang dapat memecahkan masalah nyata.</p>
+        <span class="spec-tag">→ Learner & Enthusiast</span>
+      </div>
+      <div class="spec-card reveal reveal-delay-2">
+        <div class="spec-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Data Science</h3>
+        <p>Mengolah dan menganalisa data untuk menemukan pola tersembunyi. Menggunakan Python, Pandas, dan visualisasi data untuk menghasilkan insight yang bermakna.</p>
+        <span class="spec-tag">→ Python · Pandas · Matplotlib</span>
+      </div>
+      <div class="spec-card reveal reveal-delay-3">
+        <div class="spec-icon"><i class="fas fa-code"></i></div>
+        <h3>Web Development</h3>
+        <p>Membangun antarmuka web yang elegan dan fungsional. Dari frontend yang memukau hingga backend yang solid — mengutamakan pengalaman pengguna di setiap detail.</p>
+        <span class="spec-tag">→ React · Node.js · PHP</span>
+      </div>
+      <div class="spec-card reveal reveal-delay-1">
+        <div class="spec-icon"><i class="fab fa-youtube"></i></div>
+        <h3>Content Creation</h3>
+        <p>Membuat konten yang engaging di berbagai platform — YouTube, TikTok, dan streaming. Menggabungkan kreativitas dengan produksi berkualitas tinggi.</p>
+        <span class="spec-tag">→ YouTube · TikTok · Streaming</span>
+      </div>
+      <div class="spec-card reveal reveal-delay-2">
+        <div class="spec-icon"><i class="fas fa-gamepad"></i></div>
+        <h3>Game Development</h3>
+        <p>Mengembangkan game dengan Unity dan C# sebagai pemula yang terus belajar. Minat pada game design, mekanik gameplay, dan pengalaman interaktif yang imersif.</p>
+        <span class="spec-tag">→ Unity · C# · Beginner</span>
+      </div>
+      <div class="spec-card reveal reveal-delay-3">
+        <div class="spec-icon"><i class="fas fa-paint-brush"></i></div>
+        <h3>Design & Animation</h3>
+        <p>UI/UX design yang berpusat pada pengguna, animasi 2D/3D yang memukau, dan visual storytelling yang kuat. Desain bukan hanya tampilan — ini adalah bahasa.</p>
+        <span class="spec-tag">→ UI/UX · 2D/3D · Motion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Social Media ─── -->
+<section id="social">
+  <div class="wrap">
+    <div class="s-header reveal">
+      <p class="s-pre">Find Me On</p>
+      <h2 class="s-title">Social <em>Media</em></h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="social-grid">
+      <a href="https://www.tiktok.com/@rezkiplayhere" class="social-card reveal" target="_blank">
+        <div class="social-ic"><i class="fab fa-tiktok"></i></div>
+        <div class="social-info"><h4>TikTok</h4><p>@rezkiplayhere</p></div>
+      </a>
+      <a href="https://www.youtube.com/@rezkiplayhere" class="social-card reveal reveal-delay-1" target="_blank">
+        <div class="social-ic"><i class="fab fa-youtube"></i></div>
+        <div class="social-info"><h4>YouTube</h4><p>@rezkiplayhere</p></div>
+      </a>
+      <a href="https://www.instagram.com/rezkiplay" class="social-card reveal reveal-delay-2" target="_blank">
+        <div class="social-ic"><i class="fab fa-instagram"></i></div>
+        <div class="social-info"><h4>Instagram</h4><p>@rezkiplay</p></div>
+      </a>
+      <a href="https://twitter.com/rezkiplay" class="social-card reveal reveal-delay-3" target="_blank">
+        <div class="social-ic"><i class="fab fa-twitter"></i></div>
+        <div class="social-info"><h4>Twitter / X</h4><p>@rezkiplay</p></div>
+      </a>
+      <a href="https://steamcommunity.com/id/rezkiplay" class="social-card reveal reveal-delay-1" target="_blank">
+        <div class="social-ic"><i class="fab fa-steam"></i></div>
+        <div class="social-info"><h4>Steam</h4><p>rezkiplay</p></div>
+      </a>
+      <a href="https://open.spotify.com/user/w30az0p5aucy7qflnkggtvn5e" class="social-card reveal reveal-delay-2" target="_blank">
+        <div class="social-ic"><i class="fab fa-spotify"></i></div>
+        <div class="social-info"><h4>Spotify</h4><p>rezkiplay</p></div>
+      </a>
+      <a href="https://github.com/rezkiplay" class="social-card reveal reveal-delay-3" target="_blank">
+        <div class="social-ic"><i class="fab fa-github"></i></div>
+        <div class="social-info"><h4>GitHub</h4><p>rezkiplay</p></div>
+      </a>
+      <a href="https://discord.gg/G9ANAKpVgd" class="social-card reveal reveal-delay-4" target="_blank">
+        <div class="social-ic"><i class="fab fa-discord"></i></div>
+        <div class="social-info"><h4>Discord</h4><p>Join Server</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Projects ─── -->
+<section id="projects">
+  <div class="wrap">
+    <div class="s-header reveal">
+      <p class="s-pre">My Work</p>
+      <h2 class="s-title">Featured <em>Projects</em></h2>
+      <div class="s-line"></div>
+    </div>
+
+    <div class="proj-tabs reveal">
+      <button class="proj-tab active">All</button>
+      <button class="proj-tab">Web</button>
+      <button class="proj-tab">Game</button>
+      <button class="proj-tab">AI / ML</button>
+      <button class="proj-tab">Tools</button>
+    </div>
+
+    <div class="proj-grid">
+      <!-- Project 1 -->
+      <div class="proj-card reveal reveal-delay-1">
+        <div class="proj-thumb">
+          <img src="assets/luta.jpg" alt="Discord Bot" onerror="this.parentNode.innerHTML='<div class=\'proj-thumb-placeholder\'>🐟</div>'">
+          <span class="proj-status wip">In Progress</span>
+        </div>
+        <div class="proj-body">
+          <h3>Protein Sufficiency and Affordability</h3>
+          <div class="proj-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">Machine Learning</span>
+          </div>
+          <p>Protein Sufficiency and Affordability Analysis Based on Fish Production in South Sulawesi!</p>
+          <a href="https://github.com/RezkiPlay/Protein-Sufficiency-and-Affordability" class="proj-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="proj-card reveal reveal-delay-2">
+        <div class="proj-thumb">
+          <img src="assets/dc.jpeg" alt="Discord Bot" onerror="this.parentNode.innerHTML='<div class=\'proj-thumb-placeholder\'>🤖</div>'">
+          <span class="proj-status wip">In Progress</span>
+        </div>
+        <div class="proj-body">
+          <h3>Discord Bot</h3>
+          <div class="proj-tags">
+            <span class="ptag">Node.js</span>
+            <span class="ptag">Discord.js</span>
+          </div>
+          <p>Discord bot personal untuk membantu pengguna mengatur komunitas dan sosial media dengan efisien.</p>
+          <a href="#" class="proj-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="proj-card reveal reveal-delay-3">
+        <div class="proj-thumb">
+          <img src="assets/ecommerce.jpg" alt="E-Commerce" onerror="this.parentNode.innerHTML='<div class=\'proj-thumb-placeholder\'>🛒</div>'">
+          <span class="proj-status wip">In Progress</span>
+        </div>
+        <div class="proj-body">
+          <h3>E-Commerce Website</h3>
+          <div class="proj-tags">
+            <span class="ptag">React Native</span>
+            <span class="ptag">Node.js</span>
+          </div>
+          <p>Aplikasi E-Commerce berbasis web dengan fitur pembayaran online dan pengiriman barang.</p>
+          <a href="https://github.com/RezkiPlay/Toko-Online-with-search" class="proj-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Placeholder - ML Project slot -->
+      <div class="proj-card reveal reveal-delay-1">
+        <div class="proj-thumb">
+          <div class="proj-thumb-placeholder">🧠</div>
+          <span class="proj-status wip">In Progress</span>
+        </div>
+        <div class="proj-body">
+          <h3>ML / AI Project</h3>
+          <div class="proj-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">Machine Learning</span>
+          </div>
+          <p>Proyek machine learning yang sedang dikembangkan. Coming soon — stay tuned!</p>
+          <a href="#" class="proj-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Placeholder slot for future projects -->
+      <div class="proj-card add-card reveal reveal-delay-2">
+        <div class="add-icon"><i class="fas fa-plus"></i></div>
+        <p>Next Project ?</p>
+      </div>
+
+      <div class="proj-card add-card reveal reveal-delay-3">
+        <div class="add-icon"><i class="fas fa-plus"></i></div>
+        <p>Next Project ?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Contact ─── -->
+<section id="contact">
+  <div class="wrap">
+    <div class="s-header reveal">
+      <p class="s-pre">Get In Touch</p>
+      <h2 class="s-title">Contact <em>Me</em></h2>
+      <div class="s-line"></div>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <div class="c-icon"><i class="fas fa-envelope"></i></div>
+        <h3>Email</h3>
+        <p>rezkiplayhere@gmail.com</p>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon"><i class="fab fa-discord"></i></div>
+        <h3>Discord</h3>
+        <p>@rezkiplay</p>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon"><i class="fas fa-share-alt"></i></div>
+        <h3>Social Media</h3>
+        <p>@rezkiplay</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <span class="foot-logo">RezkiPlay</span>
+      <div class="foot-links">
+        <a href="https://www.instagram.com/rezkiplay" class="foot-link" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/rezkiplay" class="foot-link" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/rezkiplay" class="foot-link" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.youtube.com/@rezkiplayhere" class="foot-link" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://discord.gg/G9ANAKpVgd" class="foot-link" target="_blank"><i class="fab fa-discord"></i></a>
+      </div>
+      <p class="foot-copy">© 2026 RezkiPlay — All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
